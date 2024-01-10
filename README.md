@@ -6,6 +6,10 @@
 
 This is a C++ program that can optimize a color palette from the user’s RGB input to maximize the percentage of people who will be able to easily detect the color differences.
 
+#### Caveat
+
+I wrote this program for a beginner CS college class during the Fall of 2023 in Replit. Therefore, I cannot guarantee that everything will work as I tested multiple times on Replit before. I will try to fix it as I learn more about programming.
+
 ### v1 Updates
 
 This program will prompt the user for a palette consisting of 3 different colors in RGB format from the terminal screen, then let the user choose from 3 different brightness levels for each color and adjust them accordingly to optimize the number of people who will be able to easily detect the differences.
@@ -14,9 +18,9 @@ My idea came from [this thread](https://stackoverflow.com/questions/50937550/for
 
 ### v2 Updates
 
-For the second update, I keep the brightness adjustment feature for 3 or less input colors and upgrade my program with the ability process up to 9 colors by grouping similar colors together into 3 groups, redistributing the colors so that no group has more than 3 colors and adjusting their brightness so that as many people can differentiate them as possible.
+For the second update, I keep the brightness adjustment feature for 3 or fewer input colors and upgrade my program with the ability to process up to 9 colors by grouping similar colors into 3 groups, redistributing the colors so that no group has more than 3 colors and adjusting their brightness so that as many people can differentiate them as possible.
 
-The way the grouping-colors mechanism works was inspired by this picture below. Through some observations of the color wheel, I have concluded that for most colorblind people, colors can be sorted into 3 main groups - Purple-to-Yellow, Yellow-to-Cyan, and Cyan-to-Purple - where all colors that are in the same group look similar to each other in the eyes of a colorblind person.
+The way the colors-grouping mechanism works was inspired by the picture below. Through some observations of the color wheel, I have concluded that for most colorblind people, colors can be sorted into 3 main groups - Purple-to-Yellow, Yellow-to-Cyan, and Cyan-to-Purple - where all colors that are in the same group look similar to each other in the eyes of a colorblind person.
 
 After grouping the colors, their brightness levels would be adjusted so that they no longer look similar to each other.
 
@@ -24,11 +28,11 @@ After grouping the colors, their brightness levels would be adjusted so that the
 
 ### v3 Updates
 
-For the last update, I have fixed a major bug that I didn't notice in the last deliverable - my program didn't categorize and sort the colors correctly, which resulted in it actually threw away half of the colors the user entered and created duplicates of the other half. The categorize() function (line 147) now works as I intended.
+For the last update, I have fixed a major bug that I didn't notice in the last deliverable - my program didn't categorize and sort the colors correctly, which resulted in it throwing away half of the colors the user entered and creating duplicates of the other half. The categorize() function (line 147) now works as I intended.
 
-I also adjusted the input prompt loop so that the program will keep asking for input unless it has at least 2 colors, since its purpose would be quite meaningless with only 1 or no colors at all.
+I also adjusted the input prompt loop so that the program will keep asking for input unless it has at least 2 colors since its purpose would be quite meaningless with only 1 or no colors at all.
 
-And last but not least, I've created a new class called "color" that serves as a separate library used in processing colors in RGB and HSL color spaces for my program. This class can also be used in my future projects as well.
+Last but not least, I've created a new class called "color" that serves as a separate library used in processing colors in RGB and HSL color spaces for my program. This class can also be used in my future projects as well.
 
 ## Developer
 
@@ -46,7 +50,7 @@ Then run the program:
 
 When the program runs, do the following:
 
-1. Enter the Red, Green, and Blue values for each color. Make sure to enter values that fall within the interval of 0-255, at least 2 colors, and no more than 9 colors. If you enter values out of this range, the program will quit the input recieving phase and start to make adjustments on the previous inputs.
+1. Enter the Red, Green, and Blue values for each color. Make sure to enter values that fall within the interval of 0-255, at least 2 colors, and no more than 9 colors. If you enter values out of this range, the program will quit the input-receiving phase and start to make adjustments to the previous inputs.
 
 2. The program should give you the output as a separate file named "Optimized palette.txt" with a list of RGB values of the adjusted colors, with 3 different levels of brightness and different hues so that most colorblind people can differentiate.
 
@@ -64,15 +68,15 @@ The following sections describe how C++ concepts have been used in this program.
 
 1. In lines 32-40, the program prints out its use and the instructions for the user to enter the color input. These lines are important because they help the user understand what to do when the program starts.
 
-2. In lines 50, 52 and 54, the user is asked to enter the values for the red, green, and blue components for each color. This is the most important information, without it the program will not work since there are no colors to process to begin with.
+2. In lines 50, 52, and 54, the user is asked to enter the values for the red, green, and blue components for each color. This is the most important information, without it, the program will not work since there are no colors to process to begin with.
 
 ### Decisions
 
-1. In lines 56-60, an if-statement is used to validate the input RGB values, and only allow the program to store the entered values to their respective red/green/blue member variables of a color input variable if the values are all within the range of 0-255. It is important that the entered values are within this interval since RGB values can't be outside of this range.
+1. In lines 56-60, an if-statement is used to validate the input RGB values and only allows the program to store the entered values to their respective red/green/blue member variables of a color input variable if the values are all within the range of 0-255. It is important that the entered values are within this interval since RGB values can't be outside of this range.
 
 2. In lines 109-115, an else-statement is called only if the condition required for the previous if-statement in lines 74-108 isn't met. This else-statement is the condition for the program to print out the warning for the user if they enter more than 9 colors, and therefore, I think else would be a suitable choice in this case instead of another if-statement.
 
-3. In lines 85-88 (color.cpp), an else if-statement is used to calculate the H values in the conversion of RGB to HSL. I used it because it was stated in [this conversion formula](https://www.rapidtables.com/convert/color/rgb-to-hsl.html) that the value of h depends on the value of delta and cmax. According to the formula, the values are calculated differently depending on the precondition, therefore we should use an else if-statement to evaluate different cases separately instead of using another if-statement and accidentally overwrite the previous calculations.
+3. In lines 85-88 (color.cpp), an else...if-statement is used to calculate the H values in the conversion of RGB to HSL. I used it because it was stated in [this conversion formula](https://www.rapidtables.com/convert/color/rgb-to-hsl.html) that the value of h depends on the value of delta and cmax. According to the formula, the values are calculated differently depending on the precondition, therefore we should use an else if-statement to evaluate different cases separately instead of using another if-statement and accidentally overwrite the previous calculations.
 
 ### Iteration
 
@@ -88,8 +92,8 @@ The following sections describe how C++ concepts have been used in this program.
 
 2. In lines 236-255, the function result() is defined. It has no output, and is used to write out the final result palette to a separate text file named "Optimized palette.txt". The return type is a void because it only writes something out to a text file and doesn't need to return any value.
 
-3. In the function catergorize() (defined in lines 147-172), I use pass-by-reference on all 4 parameters because I want to change all of them at the same time without the need to create 4 new variables and waste memory space. In this function, I want to divide all the colors within the vector "list" into 3 different groups based on theirs hues, and after catergorizing the colors, I want to delete them from the list since those colors will go through various modifications before being returned back to that list to be exported into a text file. I also defined the function with a void return type based on the aforementioned purposes.
+3. In the function catergorize() (defined in lines 147-172), I use pass-by-reference on all 4 parameters because I want to change all of them at the same time without the need to create 4 new variables and waste memory space. In this function, I want to divide all the colors within the vector "list" into 3 different groups based on their hues, and after categorizing the colors, I want to delete them from the list since those colors will go through various modifications before being returned to that list to be exported into a text file. I also defined the function with a void return type based on the aforementioned purposes.
 
 ### File Input/Output
 
-I use _ofstream_ (line 238) to write out the results to a separate text file so that the user can access the data later on without having to run the program again.
+I use _ofstream_ (line 238) to write out the results in a separate text file so that the user can access the data later on without having to run the program again.
