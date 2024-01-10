@@ -12,7 +12,7 @@ This is a C++ program that can optimize a color palette from the user’s RGB in
 
 ### Caveat
 
-I wrote this program for a beginner CS college class during the Fall of 2023 in Replit. Therefore, I cannot guarantee that everything will work like how I tested multiple times on Replit before. I will try to fix it as I learn more about programming in the future.
+I wrote this program for a beginner CS college class during the Fall of 2023 in Replit. Therefore, I cannot guarantee that everything will work like how I tested multiple times on Replit. I will try to fix it as I learn more about programming in the future.
 
 ## Updates
 ### v1.0
