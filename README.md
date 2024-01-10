@@ -55,6 +55,17 @@ When the program runs, do the following:
 
 2. The program should give you the output as a separate file named "Optimized palette.txt" with a list of RGB values of the adjusted colors, with 3 different levels of brightness and different hues so that most colorblind people can differentiate the colors.
 
+## Demonstration
+
+### Console Input
+
+![image](https://github.com/lananh-tran64/paletteOptimizer/assets/118518981/02e62dd8-6a4e-4329-816d-297a9a4d29c5)
+
+### Output File
+
+![image](https://github.com/lananh-tran64/paletteOptimizer/assets/118518981/f350391d-65d7-43a5-8cc3-036b33fec3cd)
+
+
 ## C++ Concepts
 
 The following sections describe how C++ concepts have been used in this program.
