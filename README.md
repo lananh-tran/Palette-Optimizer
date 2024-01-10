@@ -10,7 +10,7 @@ Lan Anh Tran
 
 This is a C++ program that can optimize a color palette from the user’s RGB input to maximize the percentage of people who will be able to easily detect the color differences.
 
-#### Caveat
+### Caveat
 
 I wrote this program for a beginner CS college class during the Fall of 2023 in Replit. Therefore, I cannot guarantee that everything will work like how I tested multiple times on Replit before. I will try to fix it as I learn more about programming in the future.
 
