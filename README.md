@@ -8,7 +8,7 @@ Lan Anh Tran
 
 ### Program Purpose
 
-This is a C++ program that can optimize a color palette from the user’s RGB input to maximize the percentage of people who will be able to easily detect the color differences.
+This is a C++ program that can optimize a color palette from the user’s RGB input to maximize the percentage of people who will be able to easily differentiate the colors in the palette.
 
 ### Caveat
 
