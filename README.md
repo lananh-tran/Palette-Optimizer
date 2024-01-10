@@ -53,7 +53,7 @@ When the program runs, do the following:
 
 1. Enter the Red, Green, and Blue values for each color. Make sure to enter values that fall within the interval of 0-255, at least 2 colors, and no more than 9 colors. If you enter values out of this range, the program will quit the input-receiving phase and start to make adjustments to the previous inputs.
 
-2. The program should give you the output as a separate file named "Optimized palette.txt" with a list of RGB values of the adjusted colors, with 3 different levels of brightness and different hues so that most colorblind people can differentiate.
+2. The program should give you the output as a separate file named "Optimized palette.txt" with a list of RGB values of the adjusted colors, with 3 different levels of brightness and different hues so that most colorblind people can differentiate the colors.
 
 ## C++ Concepts
 
