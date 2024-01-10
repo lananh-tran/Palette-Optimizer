@@ -8,7 +8,7 @@ This is a C++ program that can optimize a color palette from the user’s RGB in
 
 ### v1 Updates
 
-This program will prompt the user for a palette consisting of 3 different colors in RGB format, then let the user choose from 3 different brightness levels for each color and adjust them accordingly to optimize the number of people who will be able to easily detect the differences.
+This program will prompt the user for a palette consisting of 3 different colors in RGB format from the terminal screen, then let the user choose from 3 different brightness levels for each color and adjust them accordingly to optimize the number of people who will be able to easily detect the differences.
 
 My idea came from [this thread](https://stackoverflow.com/questions/50937550/formula-to-increase-brightness-of-rgb) on Stack Overflow.
 
