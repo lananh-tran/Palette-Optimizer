@@ -1,5 +1,0 @@
-Based on your input, I recommend using this palette:
-(254, 103, 163)
-(252, 3, 128)
-(156, 254, 103)
-(146, 153, 211)
