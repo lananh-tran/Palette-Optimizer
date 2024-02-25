@@ -33,7 +33,7 @@ After grouping the colors, their brightness levels would be adjusted so that the
 
 ### v3.0
 
-For the last update, I have fixed a major bug that I didn't notice in the last deliverable - my program didn't categorize and sort the colors correctly, which resulted in it throwing away half of the colors the user entered and creating duplicates of the other half. The categorize() function (line 147) now works as I intended.
+For the last update, I have fixed a major bug that I didn't notice in the previous update - my program didn't categorize and sort the colors correctly, which resulted in it throwing away half of the colors the user entered and creating duplicates of the other half. The categorize() function (line 147) now works as I intended.
 
 I also adjusted the input prompt loop so that the program will keep asking for input unless it has at least 2 colors since its purpose would be quite meaningless with only 1 or no colors at all.
 
