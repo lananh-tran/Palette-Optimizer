@@ -1,0 +1,5 @@
+Based on your input, I recommend using this palette:
+(198, 159, 187)
+(190, 246, 111)
+(5, 250, 26)
+(225, 118, 239)
