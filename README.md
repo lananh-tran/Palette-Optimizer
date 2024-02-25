@@ -64,3 +64,5 @@ When the program runs, do the following:
 ### Output File
 
 ![image](https://github.com/lananh-tran64/paletteOptimizer/assets/118518981/f350391d-65d7-43a5-8cc3-036b33fec3cd)
+
+For more details on how my program works, see [Documentation](Documentation.md).
