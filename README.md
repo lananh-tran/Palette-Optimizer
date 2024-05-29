@@ -4,7 +4,7 @@
 
 ### Developer
 
-Anh Tran
+Lan-Anh Tran
 
 ### Program Purpose
 
